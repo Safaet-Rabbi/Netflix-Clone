@@ -1,0 +1,23 @@
+.scroll-buttons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 10;
+}
+
+.scroll-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.scroll-container {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    display: flex;
+}
