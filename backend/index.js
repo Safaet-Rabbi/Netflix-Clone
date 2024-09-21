@@ -19,7 +19,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 
-const allowedOrigins = ['http://localhost:3000', 'https://netflix-clone-er0m.onrender.com'];
+const allowedOrigins = ['http://localhost:3000', 'https://cosmic-starburst-73160f.netlify.app'];
+
 app.use(cors({
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
@@ -28,8 +29,9 @@ app.use(cors({
       callback(new Error('Not allowed by CORS'));
     }
   },
-  credentials: true
+  credentials: true // This allows cookies and authentication data to be sent with requests
 }));
+
 
 // Session and Passport setup
 app.use(session({
